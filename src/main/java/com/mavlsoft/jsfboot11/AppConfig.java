@@ -83,7 +83,7 @@ public class AppConfig implements ServletContextAware, WebMvcConfigurer, Servlet
 
     @Override
     public void onStartup(ServletContext servletContext) throws ServletException {
-    	LOG.info("onStartup Initializing ServletContext...");
+        LOG.info("onStartup Initializing ServletContext...");
         ManagedBeanDestroyerListener destroyListener = new ManagedBeanDestroyerListener();
         servletContext.addListener(destroyListener);
     }

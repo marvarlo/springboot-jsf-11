@@ -1,0 +1,36 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+    xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:pt="http://xmlns.jcp.org/jsf/passthrough" xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <style>
+        p {
+            line-height: 1.5;
+            margin: 0;
+            text-align: justify;
+        }
+    </style>
+</h:head>
+
+<h:body>
+    <h:form id="frmTestID">
+        <p:card style="width: 25rem; margin-bottom: 2em; text-align: center;">
+            <f:facet name="title">
+                <h:outputText value="#{carsBean.cardTitle}"/>
+            </f:facet>                 
+            <p><h:outputText value="#{carsBean.cardText}"/></p>
+            <br/>
+            <p:inputText id="textFieldID"  value="#{carsBean.textField}" pt:placeholder="Card Text here" required="true" requiredMessage="text value required"/>
+            <p:message for="@previous"/>
+            <f:facet name="footer">
+                <p:commandButton icon="pi pi-check" value="Apply" id="btnSaveID" update="@form"/>
+                <p:commandButton icon="pi pi-times" value="Reset" id="btnCancelID"
+                	action="#{carsBean.reset()}" update="@form" validateClient="false" process="@this"
+                	styleClass="ui-button-secondary" style="margin-left: .5em"/>
+            </f:facet>
+        </p:card>
+    </h:form>
+</h:body>
+
+</html>

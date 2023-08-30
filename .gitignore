@@ -63,3 +63,4 @@ build/
 *.log
 *.bak
 *.old
+/.metadata/

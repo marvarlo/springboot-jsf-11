@@ -1,3 +1,5 @@
+// Updated imports from javax to jakarta
+
 package com.mavlsoft.jsfboot11;
 
 import org.slf4j.Logger;

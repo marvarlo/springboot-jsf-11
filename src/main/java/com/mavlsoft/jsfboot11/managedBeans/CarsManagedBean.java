@@ -2,10 +2,10 @@ package com.mavlsoft.jsfboot11.managedBeans;
 
 import java.io.Serializable;
 
-import javax.annotation.PostConstruct;
-// import javax.faces.event.AjaxBehaviorEvent;
-import javax.faces.view.ViewScoped;
-import javax.inject.Named;
+import jakarta.annotation.PostConstruct;
+// import jakarta.faces.event.AjaxBehaviorEvent;
+import jakarta.faces.view.ViewScoped;
+import jakarta.inject.Named;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,11 +32,10 @@ public class CarsManagedBean implements Serializable {
 
     public void reset() {
         LOG.info("Reset Requested!");
-        this.cardText =
-                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae "
-                        + "numquam deserunt "
-                        + "quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate "
-                        + "neque quas!";
+        this.cardText = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae "
+                + "numquam deserunt "
+                + "quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate "
+                + "neque quas!";
         this.textField = "";
     }
 
